@@ -1,4 +1,4 @@
-from flask import Flask, url_for
+from flask import Flask, url_for, redirect
 app  = Flask(__name__)
 
 @app.route("/")
@@ -11,7 +11,7 @@ def web():
             </body> 
         </html>""" 
         
-"app.route("/author")
+@app.route("/author")
 def author():
     name = "Кем Никита Алексеевич"
     group = "ФБИ-22"
@@ -38,3 +38,22 @@ def oak():
         <img src="''' + path +'''">">
     </body>
 </html>'''
+
+count = 0
+
+@app.route('/lab1/counter')
+def counter():
+    global count
+    count +=1
+    return '''
+<!doctype html>
+<html>
+    <body>
+        Сколько раз вы сюда заходили: ''' + str(count) + '''
+    </body>
+</html>
+'''
+
+@app.route("/info")
+def info():
+    return redirect("/author")
