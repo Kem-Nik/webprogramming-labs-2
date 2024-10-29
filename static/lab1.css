@@ -1,0 +1,25 @@
+img{
+    width: 300px;
+}
+.py{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    align-items: center;
+}
+.py img{
+    width: 70px;
+}
+.car{
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+}
+header{
+    background: rgb(253, 234, 167);
+    color: rgb(113, 32, 12);
+}
+footer{
+    background: rgb(253, 234, 167);
+    color: rgb(113, 32, 12);
+}

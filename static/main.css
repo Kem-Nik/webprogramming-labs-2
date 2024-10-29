@@ -1,0 +1,19 @@
+body{
+    margin: 0;
+}
+main{
+    margin-bottom: 40px;
+    padding: 10px;
+}
+header{
+    margin-bottom: 30px;
+    padding: 20px;
+    background: rgb(253, 234, 167);
+    color: rgb(113, 32, 12);
+}
+footer{
+    margin-bottom: 30px;
+    padding: 20px;
+    background: rgb(253, 234, 167);
+    color: rgb(113, 32, 12);
+}

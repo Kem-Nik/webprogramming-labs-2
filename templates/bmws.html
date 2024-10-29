@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{# номер лабораторной работы: #}
+{% block lab %} Лабораторная работа 2 {% endblock %}
+
+{# основной контент: #}
+
+{% block main %}
+<div>
+    {% for bmw in bmws %}
+    <div class="bmws" style="display: inline-block;">
+        <img style="width: 200px;" src="{{url_for('static', filename=bmw.img)}}" alt="{{bmw.name}}">
+        <p>{{bmw.name}}</p>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
