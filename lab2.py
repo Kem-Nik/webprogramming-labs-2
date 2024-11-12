@@ -75,18 +75,18 @@ def example():
             {'name':'мандарины' , 'price': 95},
             {'name':'манго' , 'price': 321}
     ]
-    return render_template('example.html', name=name, lab=lab, course=course, group = group, fruits = fruits)
+    return render_template('lab2/example.html', name=name, lab=lab, course=course, group = group, fruits = fruits)
   
 
 @lab2.route('/lab2/')
 def lab():
-      return render_template('lab2.html')
+      return render_template('lab2/lab2.html')
 
 
 @lab2.route('/lab2/filter')
 def filter():
       phrase = "О <b> сколько </b> <u>нам</u> <i>открытий</i> чудных..."
-      return render_template('filter.html', phrase = phrase)
+      return render_template('lab2/filter.html', phrase = phrase)
 
 
 @lab2.route('/lab2/calc/<int:a>/<int:b>')
@@ -131,16 +131,16 @@ book_list = [
 ]
 @lab2.route('/lab2/books')
 def show_books():
-    return render_template('books.html', books=book_list)
+    return render_template('lab2/books.html', books=book_list)
 
 
 bmws = [
-      {'name': 'BMW M2', 'img': 'm2.webp' },
-      {'name': 'BMW M3', 'img': 'm3.webp' },
-      {'name': 'BMW M4', 'img': 'm4.webp' },
-      {'name': 'BMW M5', 'img': 'm5.jpg' },
-      {'name': 'BMW M8', 'img': 'm8.webp' }
+      {'name': 'BMW M2', 'img': 'lab2/m2.webp' },
+      {'name': 'BMW M3', 'img': 'lab2/m3.webp' },
+      {'name': 'BMW M4', 'img': 'lab2/m4.webp' },
+      {'name': 'BMW M5', 'img': 'lab2/m5.jpg' },
+      {'name': 'BMW M8', 'img': 'lab2/m8.webp' }
 ]
 @lab2.route('/lab2/bmw')
 def bmw():
-      return render_template('bmws.html', bmws=bmws)
+      return render_template('lab2/bmws.html', bmws=bmws)

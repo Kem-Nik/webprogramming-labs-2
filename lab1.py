@@ -8,7 +8,7 @@ def lab():
 <!doctype html>
 <html>
     <head>
-        <link rel="stylesheet" href="''' + url_for('static', filename='lab1.css') + '''">
+        <link rel="stylesheet" href="''' + url_for('static', filename='lab1/lab1.css') + '''">
     </head>
     <body>
         <header>
@@ -44,11 +44,11 @@ def oak():
 <!doctype html>
 <html>
     <head>
-        <link rel="stylesheet" href="''' + url_for('static', filename='lab1.css') + '''">
+        <link rel="stylesheet" href="''' + url_for('static', filename='lab1/lab1.css') + '''">
     </head>
     <body>
         <h1>Дуб</h1>
-        <img src="''' + url_for('static', filename='oak.jpg') + '''">
+        <img src="''' + url_for('static', filename='lab1/oak.jpg') + '''">
     </body>
 </html>
 '''
@@ -60,11 +60,11 @@ def student():
 <!doctype html>
 <html>
     <head>
-        <link rel="stylesheet" href="''' + url_for('static', filename='lab1.css') + '''">
+        <link rel="stylesheet" href="''' + url_for('static', filename='lab1/lab1.css') + '''">
     </head>
     <body>
         <h1>Кем Никита Алексеевич</h1>
-        <img src="''' + url_for('static', filename='nstu.jpg') + '''">
+        <img src="''' + url_for('static', filename='lab1/nstu.jpg') + '''">
     </body>
 </html>
 '''
@@ -76,12 +76,12 @@ def python():
 <!doctype html>
 <html>
     <head>
-    <link rel="stylesheet" href="''' + url_for('static', filename='lab1.css') + '''">
+    <link rel="stylesheet" href="''' + url_for('static', filename='lab1/lab1.css') + '''">
     </head>
     <body>
         <div class="py">
             <h2>Для чего нужен Python?</h2>
-            <img src="''' + url_for('static', filename='py.webp') + '''">
+            <img src="''' + url_for('static', filename='lab1/py.webp') + '''">
         </div>
         <div>
             Data Science и машинное обучение. Эти два направления IT тесно связаны друг с другом. Наука о данных заключается в обработке больших массивов информации из базы данных, а машинное обучение — в разработке компьютерных алгоритмов, способных учиться на ней и делать точные прогнозы. В Data Science используют Python для включения очистки и разметки данных, поиска и обработки статистической информации, ее визуализацию в виде диаграмм, графиков и т.д. С помощью библиотеки Python ML классифицируются изображения, тексты, поисковый трафик, осуществляется распознавание лиц и речи, глубинное машинное обучение.
@@ -102,10 +102,10 @@ def car():
 <!doctype html>
 <html>
     <head>
-    <link rel="stylesheet" href="''' + url_for('static', filename='lab1.css') + '''">
+    <link rel="stylesheet" href="''' + url_for('static', filename='lab1/lab1.css') + '''">
     </head>
     <body class="car">
-        <img src="''' + url_for('static', filename='car.jpg') + '''">
+        <img src="''' + url_for('static', filename='lab1/car.jpg') + '''">
         <div>
             <div class="car">
                 BMW AG — немецкий производитель автомобилей, мотоциклов, двигателей, а также велосипедов. Более 45 % акций принадлежит семье Квандт. Председателем правления компании является Оливер Ципсе. Главный дизайнер — Йозеф Кабан. В списке крупнейших публичных компаний мира Forbes Global 2000 за 2022 год BMW Group заняла 64-е место, а в списке Fortune Global 500 — 59-е место
