@@ -188,3 +188,42 @@ def fridge():
       else:
           phraze = 'Неизвестная ошибка'
       return render_template('lab4/fridge.html', phraze=phraze, snow=snow)
+
+
+seeds_list = {
+    'barley': {'name': 'ячмень', 'price': 12345},
+    'oats': {'name': 'овёс', 'price': 8522},
+    'wheat': {'name': 'пшеница', 'price': 8722},
+    'rye': {'name': 'рожь', 'price': 14111}
+}
+@lab4.route('/lab4/seed', methods=['GET', 'POST'])
+def seed():
+    if request.method == 'POST':
+        seed = request.form.get('seed')
+        weight = request.form.get('weight')
+        if weight == '':
+            phraze = "Ошибка: укажите вес заказа"
+            return render_template('lab4/seed.html', phraze=phraze)
+        try:
+            weight = float(weight)
+        except ValueError:
+            phraze = "Ошибка: вес должен быть числом."
+            return render_template('lab4/seed.html', phraze=phraze)
+        if weight <= 0:
+            phraze = "Ошибка: вес должен быть больше 0"
+            return render_template('lab4/seed.html', phraze=phraze)
+        if weight > 500:
+            phraze = "Ошибка: такого объёма нет в наличии"
+            return render_template('lab4/seed.html', phraze=phraze)
+        seeds_name = seeds_list.get(seed)
+        price_per_ton = seeds_name['price']
+        seeds_name_ru = seeds_name['name']
+        total_price = weight * price_per_ton
+        discount_phraze = None
+        if weight > 50:
+            discount = 0.1 
+            total_price *= (1 - discount)
+            discount_phraze = "Применена скидка 10% за большой объём"
+        phraze = f"Заказ успешно сформирован. Вы заказали {seeds_name_ru}. Вес: {weight} т. Сумма к оплате: {total_price:.2f} руб."
+        return render_template('lab4/seed.html', phraze=phraze, discount=discount_phraze)
+    return render_template('lab4/seed.html')
