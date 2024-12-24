@@ -84,6 +84,10 @@ function sendFilm() {
         }
         return resp.json();
     })
+    .then (function(errors) {
+        if (errors.description)
+            document.getElementById('description-error').innerText = errors.description;
+    });
 }
 function editFilm(id) {
     fetch (`/lab7/rest-api/films/${id}`)
