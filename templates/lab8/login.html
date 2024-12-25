@@ -19,5 +19,8 @@
             <div style="color: red;">{{ error }}</div>
         {% endif %}
         <button type="submit">Вход</button>
+        <button>
+            <a href="{{ url_for('lab8.logout') }}">Выход</a>
+        </button>
     </form>
 {% endblock %}
